@@ -5,14 +5,20 @@
   Time: 10:37
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <html>
 <head>
     <title>Massively by HTML5 UP</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="/css/noscript.css">
+        </noscript>
 </head>
 <body class="is-preload">
 
