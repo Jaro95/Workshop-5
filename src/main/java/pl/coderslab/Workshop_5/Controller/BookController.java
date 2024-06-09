@@ -1,5 +1,7 @@
 package pl.coderslab.Workshop_5.Controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.Workshop_5.Model.Book;
 import pl.coderslab.Workshop_5.Repository.BookRepository;
@@ -8,7 +10,8 @@ import pl.coderslab.Workshop_5.Service.BookService;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
+//@RestController
+@Controller
 @RequestMapping()
 public class BookController {
 
@@ -18,6 +21,11 @@ public class BookController {
     public BookController(BookRepository bookRepository, BookService bookService) {
         this.bookRepository = bookRepository;
         this.bookService = bookService;
+    }
+    @GetMapping("/test")
+    public String helloTest(Model model) {
+        model.addAttribute("message","DZIAlA?");
+        return "test";
     }
 
     @GetMapping("/helloBook")
